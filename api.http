@@ -9,8 +9,8 @@ Content-Type: application/json
 
 {
   "name": "route test 1",
-  "source_id": "1",
-  "destination_id": "2"
+  "source_id": "ChIJkZUz0Gxnv5QREzx8vDyV_Y4",
+  "destination_id": "ChIJjaMvlkhnv5QRNlyRxT99RHs"
 }
 
 ### Maps
