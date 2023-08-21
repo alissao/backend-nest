@@ -21,7 +21,8 @@
 		"ghcr.io/devcontainers/features/common-utils:2": {},
 		"ghcr.io/devcontainers-contrib/features/pnpm:2": {},
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/devcontainers-contrib/features/nestjs-cli:2": {}
 	},
 	"customizations": {
 		"vscode": {
