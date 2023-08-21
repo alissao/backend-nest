@@ -34,6 +34,23 @@ $ pnpm install
 
 ## Running the app
 
+You'll need a Google cloud Project, with these enabled API's:
+- Maps API
+- Places API
+- Directions API
+
+Once done, get the API Key and throw it on the root under the name "tolkien-maps.json" with the following structure:
+
+```bash
+  {
+    "msap-key": "Your API key here"
+  }
+```
+
+After that you can either run with pnpm or Docker:
+
+## Running with pnpm
+
 ```bash
 # development
 $ pnpm run start
@@ -43,6 +60,12 @@ $ pnpm run start:dev
 
 # production mode
 $ pnpm run start:prod
+```
+
+## Running with Docker and Docker Compose
+
+```bash
+  $ docker compose up -d
 ```
 
 ## Test
