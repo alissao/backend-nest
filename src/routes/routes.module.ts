@@ -7,6 +7,6 @@ import { RoutesDriverService } from './routes-driver/routes-driver.service';
 @Module({
   imports: [MapsModule],
   controllers: [RoutesController],
-  providers: [RoutesService, RoutesDriverService]
+  providers: [RoutesService, RoutesDriverService],
 })
-export class RoutesModule { }
+export class RoutesModule {}

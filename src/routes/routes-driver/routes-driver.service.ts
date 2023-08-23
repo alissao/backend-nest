@@ -5,17 +5,13 @@ import { PrismaService } from 'src/prisma/prisma/prisma.service';
 export class RoutesDriverService {
   constructor(private prismaService: PrismaService) {}
 
-  async createOrUpdate(dto: { route_id: string; lat: number; lng: number; }) {
-    const countRouteDriver = await this.prismaService.routeDriver.count({ where: {
-      route_id: dto.route_id,
-    }});
-
+  async createOrUpdate(dto: { route_id: string; lat: number; lng: number }) {
     this.prismaService.routeDriver.upsert({
       include: {
-        route: true
+        route: true,
       },
       where: {
-        route_id: dto.route_id
+        route_id: dto.route_id,
       },
       create: {
         route_id: dto.route_id,
@@ -23,21 +19,21 @@ export class RoutesDriverService {
           set: {
             location: {
               lat: dto.lat,
-              lng: dto.lng
-            }
-          }
-        }
+              lng: dto.lng,
+            },
+          },
+        },
       },
       update: {
         points: {
           set: {
             location: {
               lat: dto.lat,
-              lng: dto.lng
-            }
-          }
-        }
-      }
-    })
+              lng: dto.lng,
+            },
+          },
+        },
+      },
+    });
   }
 }

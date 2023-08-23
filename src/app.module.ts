@@ -9,13 +9,13 @@ import config from './config/configuration';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ 
-      isGlobal: true ,
-      load: [config]
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [config],
     }),
-    PrismaModule, 
-    RoutesModule, 
-    MapsModule
+    PrismaModule,
+    RoutesModule,
+    MapsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
